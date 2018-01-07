@@ -4,8 +4,8 @@ require 'mail'
 mailer_options = {
             :address              => "smtp.gmail.com",
             :port                 => 587,
-            :user_name            => ENV['EMAIL'],
-            :password             => ENV['EMAIL_PASSWORD'],
+            :user_name            => ENV['EMAIL_SYSTEM'],
+            :password             => ENV['EMAIL_SYSTEM_PASSWORD'],
             :authentication       => 'plain',
             :enable_starttls_auto => true
           }
@@ -26,8 +26,8 @@ class Alert
   def send_email
     body_txt = "ACX rate in AUD: #{@acx_rate_aud}\nACX rate in EUR: #{@acx_rate_euro}\nKraken rate (EUR): #{@kraken_rate}\nRatio: #{@ratio}"
     Mail.deliver do
-      from     'ntonnelier@sparkdigital.com'
-      to       'na.tonnelier@gmail.com'
+      from     ENV['EMAIL_SYSTEM']
+      to       ENV['EMAIL_USER']
       subject  'Exchange news'
       body     body_txt
     end
