@@ -1,5 +1,5 @@
 require 'mail'
-require 'dotenv/load'
+# require 'dotenv/load'
 
 mailer_options = {
             :address              => "smtp.gmail.com",

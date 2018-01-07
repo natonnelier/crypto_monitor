@@ -6,6 +6,9 @@ GEM
     hashie (3.5.7)
     httparty (0.15.6)
       multi_xml (>= 0.5.2)
+    mail (2.7.0)
+      mini_mime (>= 0.1.1)
+    mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     multi_xml (0.6.0)
     nokogiri (1.8.1)
@@ -23,12 +26,13 @@ DEPENDENCIES
   addressable
   hashie
   httparty
+  mail
   nokogiri
   roda
   sequel
 
 RUBY VERSION
-   ruby 2.1.2p95
+   ruby 2.3.1p112
 
 BUNDLED WITH
    1.16.1
