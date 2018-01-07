@@ -2,7 +2,7 @@ require './lib/services/currency_exchange'
 require './lib/services/acx'
 require './lib/services/kraken'
 
-RATIO_LIMIT = 5.0
+RATIO_LIMIT = ENV['RATIO_LIMIT'].to_f
 
 module EthereumMonitor
   class KrakenToAcx

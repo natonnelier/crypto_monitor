@@ -1,10 +1,11 @@
 require 'mail'
+require 'dotenv/load'
 
 mailer_options = {
             :address              => "smtp.gmail.com",
             :port                 => 587,
-            :user_name            => 'ntonnelier@sparkdigital.com',
-            :password             => 'matafuego36',
+            :user_name            => ENV['EMAIL'],
+            :password             => ENV['EMAIL_PASSWORD'],
             :authentication       => 'plain',
             :enable_starttls_auto => true
           }

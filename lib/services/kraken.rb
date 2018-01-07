@@ -4,8 +4,8 @@ require 'addressable/uri'
 require 'httparty'
 require 'hashie'
 
-KRAKEN_API_KEY = '9Mx6eR03aBp3GvAtQIOn76aNIkCrHmOI3OM/betXqdiuWdK+I0LU/RFj'
-KRAKEN_API_SECRET = 'ZTIP361hYBTJdPMUpo/IkKGHTlZn/zBOZK9y2lsjpGqR7iQqpH3qorN4iUy8/ZD6h8SLyPo2dPGFi2Xwj4eh3g=='
+KRAKEN_API_KEY = ENV['KRAKEN_API_KEY']
+KRAKEN_API_SECRET = ENV['KRAKEN_API_SECRET']
 
 
 module Kraken
