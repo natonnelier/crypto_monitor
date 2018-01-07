@@ -10,6 +10,8 @@ class CryptoMonitor < Roda
 
   route do |r|
     r.root do
+      client = EthereumMonitor::KrakenToAcx.new
+      client.check_ratio
     end
   end
 end
